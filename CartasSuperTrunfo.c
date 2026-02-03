@@ -9,7 +9,7 @@ int main() {
   char estado, estado2;;
   char codigoCarta[5], nomeCidade[20], codigoCarta2[5], nomeCidade2[20];
   int populacaoCidade, pontosTuristicos, populacaoCidade2, pontosTuristicos2;
-  float areaCidade, pibCidade, areaCidade2, pibCidade2;
+  float areaCidade, pibCidade, areaCidade2, pibCidade2, densidadePopulacional, pibPerCapita, densidadePopulacional2, pibPerCapita2;
 
   /*
     CADASTRO DA PRIMEIRA CARTA
@@ -45,6 +45,9 @@ int main() {
   scanf("%d", &pontosTuristicos);
 
   // Imprime na tela o as informações da primeira carta 
+  densidadePopulacional = (float) populacaoCidade / areaCidade;
+  pibPerCapita =  pibCidade / (float) populacaoCidade;
+
   printf("\n-=-Informações da primeira carta-=-\n");
   printf("Estado: %c\n", estado);
   printf("Codigo: %s\n", codigoCarta);
@@ -53,6 +56,8 @@ int main() {
   printf("Area: %.2f km² \n", areaCidade);
   printf("PIB: %.2f de reais\n", pibCidade);
   printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos);
+  printf("Densidade populacional: %.2f\n", densidadePopulacional);
+  printf("PIB per Capita: %.2f\n", pibPerCapita);
 
   /*
       CADASTRO DA SEGUNDA CARTA
@@ -88,6 +93,9 @@ int main() {
   scanf("%d", &pontosTuristicos2);
 
   // Imprime na tela o as informações da segunda carta
+  densidadePopulacional2 = (float) populacaoCidade2 / areaCidade2;
+  pibPerCapita2 = pibCidade2 / (float) populacaoCidade2;
+
   printf("\n-=-Informações da segunda carta-=-\n");
   printf("Estado: %c\n", estado2);
   printf("Codigo: %s\n", codigoCarta2);
@@ -96,6 +104,8 @@ int main() {
   printf("Area: %.2f km² \n", areaCidade2);
   printf("PIB: %.2f de reais\n", pibCidade2);
   printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
+  printf("Densidade populacional: %.2f\n", densidadePopulacional2);
+  printf("PIB per Capita: %.2f\n", pibPerCapita2);
 
 return 0;
 

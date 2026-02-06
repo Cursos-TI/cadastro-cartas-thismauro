@@ -8,8 +8,9 @@ int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
   char estado, estado2;;
   char codigoCarta[5], nomeCidade[20], codigoCarta2[5], nomeCidade2[20];
-  int populacaoCidade, pontosTuristicos, populacaoCidade2, pontosTuristicos2;
-  float areaCidade, pibCidade, areaCidade2, pibCidade2, densidadePopulacional, pibPerCapita, densidadePopulacional2, pibPerCapita2;
+  unsigned long int populacaoCidade, populacaoCidade2;
+  int pontosTuristicos, pontosTuristicos2;
+  float areaCidade, pibCidade, areaCidade2, pibCidade2, densidadePopulacional, pibPerCapita, densidadePopulacional2, pibPerCapita2, superPoder;
 
   /*
     CADASTRO DA PRIMEIRA CARTA
@@ -106,6 +107,18 @@ int main() {
   printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
   printf("Densidade populacional: %.2f\n", densidadePopulacional2);
   printf("PIB per Capita: %.2f\n", pibPerCapita2);
+
+  if (pibPerCapita > pibPerCapita2) {
+    printf("\nPIB per Capita da primeira carta: %.2f\n", pibPerCapita);
+    printf("PIB per Capita da segunda carta: %.2f\n", pibPerCapita2);
+    printf("\nA carta 1 foi a vencedora!\n");
+    
+  } else {
+    printf("\nPIB per Capita da primeira carta: %.2f\n", pibPerCapita);
+    printf("PIB per Capita da segunda carta: %.2f\n", pibPerCapita2);
+    printf("\nA carta 2 foi a vencedora!\n");
+  }
+  
 
 return 0;
 
